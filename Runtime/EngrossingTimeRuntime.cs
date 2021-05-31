@@ -108,7 +108,7 @@ namespace com.amabie.EngrossingTime {
 		/// Lifecycle の Update メソッドで呼ばれることを想定している
 		/// </summary>
 		/// <param name="deltaTime">Time.deltaTime を想定している</param>
-        public void UpdateFletTime(float deltaTime)
+        public void UpdateFeltTime(float deltaTime)
         {
             feltTime += deltaTime;
             if (isIncrement)

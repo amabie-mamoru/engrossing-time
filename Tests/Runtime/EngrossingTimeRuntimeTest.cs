@@ -46,21 +46,21 @@ namespace com.amabie.EngrossingTime
             var i = CreateInstance();
             i.SetFeltTerm(10f);
             Assert.AreEqual(0f, i.DisplayFeltTime);
-            i.UpdateFletTime(1.23f);
+            i.UpdateFeltTime(1.23f);
             Assert.AreEqual(1.2f, i.DisplayFeltTime);
 
             // 共通テスト引数2
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
             Assert.AreEqual(20f, i.DisplayFeltTime);
-            i.UpdateFletTime(1.23f);
+            i.UpdateFeltTime(1.23f);
             Assert.AreEqual(21.2f, i.DisplayFeltTime);
 
             // 上限チェック
             i = CreateInstance();
             i.SetFeltTerm(40f, 500f);
             Assert.AreEqual(40f, i.DisplayFeltTime);
-            i.UpdateFletTime(1000f);
+            i.UpdateFeltTime(1000f);
             Assert.AreEqual(500f, i.DisplayFeltTime);
 
             // 負の値
@@ -70,9 +70,9 @@ namespace com.amabie.EngrossingTime
             i = CreateInstance();
             i.SetFeltTerm(100f, 0f);
             Assert.AreEqual(100f, i.DisplayFeltTime);
-            i.UpdateFletTime(-20.5f);
+            i.UpdateFeltTime(-20.5f);
             Assert.AreEqual(79.5f, i.DisplayFeltTime);
-            i.UpdateFletTime(-100000f);
+            i.UpdateFeltTime(-100000f);
             Assert.AreEqual(0f, i.DisplayFeltTime);
         }
 
@@ -89,7 +89,7 @@ namespace com.amabie.EngrossingTime
             // 浮動小数展の表示を保証する
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(1.23f);
+            i.UpdateFeltTime(1.23f);
             Assert.AreEqual(21.2f, i.DisplayFeltTime);
 
             // 丸めを保証する
@@ -98,32 +98,32 @@ namespace com.amabie.EngrossingTime
             // 小数第二位 (X.YZ の Y）が奇数の場合は切り下げ / 偶数の場合は切り下げ 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.54f);
+            i.UpdateFeltTime(4.54f);
             Assert.AreEqual(24.5f, i.DisplayFeltTime);
 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.55f);
+            i.UpdateFeltTime(4.55f);
             Assert.AreEqual(24.5f, i.DisplayFeltTime);
 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.56f);
+            i.UpdateFeltTime(4.56f);
             Assert.AreEqual(24.6f, i.DisplayFeltTime);
 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.44f);
+            i.UpdateFeltTime(4.44f);
             Assert.AreEqual(24.4f, i.DisplayFeltTime);
 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.45f);
+            i.UpdateFeltTime(4.45f);
             Assert.AreEqual(24.5f, i.DisplayFeltTime);
 
             i = CreateInstance();
             i.SetFeltTerm(20f, 30f);
-            i.UpdateFletTime(4.46f);
+            i.UpdateFeltTime(4.46f);
             Assert.AreEqual(24.5f, i.DisplayFeltTime);
         }
 
@@ -141,37 +141,37 @@ namespace com.amabie.EngrossingTime
             i = CreateInstance();
             i.SetFeltTerm(20f, 100f);
             Assert.AreEqual(20f, i.Progress);
-            i.UpdateFletTime(20f);
+            i.UpdateFeltTime(20f);
             Assert.AreEqual(40f, i.Progress);
 
             i = CreateInstance();
             i.SetFeltTerm(100f, 0f);
-            i.UpdateFletTime(-10f);
+            i.UpdateFeltTime(-10f);
             Assert.AreEqual(10f, i.Progress);
 
             // 上限 / 下限
             i = CreateInstance();
             i.SetFeltTerm(20f, 100f);
-            i.UpdateFletTime(1000f);
+            i.UpdateFeltTime(1000f);
             Assert.AreEqual(100f, i.Progress);
-            i.UpdateFletTime(-1000f);
+            i.UpdateFeltTime(-1000f);
             Assert.AreEqual(0f, i.Progress);
 
             // 浮動小数展の表示を保証する
             i = CreateInstance();
             i.SetFeltTerm(100f);
-            i.UpdateFletTime(1.23f);
+            i.UpdateFeltTime(1.23f);
             Assert.AreEqual(1.2f, i.Progress);
 
             // 丸めを保証する
             i = CreateInstance();
             i.SetFeltTerm(100f);
-            i.UpdateFletTime(4.54f);
+            i.UpdateFeltTime(4.54f);
             Assert.AreEqual(4.5f, i.Progress);
 
             i = CreateInstance();
             i.SetFeltTerm(100f);
-            i.UpdateFletTime(4.55f);
+            i.UpdateFeltTime(4.55f);
             Assert.AreEqual(4.6f, i.Progress);
         }
     }
