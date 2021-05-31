@@ -87,7 +87,7 @@ namespace com.amabie.EngrossingTime {
         /// </example>
         /// <param name="beginningTime">開始時間</param>
         /// <param name="endingTime">終了時間</param>
-        public void SetFeltTime(float beginningTime, float endingTime)
+        public void SetFeltTerm(float beginningTime, float endingTime)
         {
             FeltTerm = new Term(beginningTime, endingTime);
             feltTime = beginningTime;
@@ -98,9 +98,9 @@ namespace com.amabie.EngrossingTime {
         /// 0秒〜計測する場合は引数一つで設定できるようにした
         /// </summary>
         /// <param name="endingTime">終了時間</param>
-        public void SetFeltTime(float endingTime)
+        public void SetFeltTerm(float endingTime)
         {
-            SetFeltTime(0, endingTime);
+            SetFeltTerm(0, endingTime);
         }
 
         /// <summary>
