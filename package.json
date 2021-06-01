@@ -1,0 +1,10 @@
+{
+  "name": "com.amabie.engrossingtime",
+  "displayName": "EngrossingTime",
+  "version": "1.0.0",
+  "unity": "2021.1",
+  "description": "engrossing time",
+  "author": {
+    "name": "amabie-mamoru"
+  }
+}
