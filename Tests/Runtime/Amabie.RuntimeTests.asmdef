@@ -1,0 +1,12 @@
+{
+  "name": "Amabie.EngrossingTime.Tests",
+  "references": [
+    "Amabie.EngrossingTime"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": []
+}
+
